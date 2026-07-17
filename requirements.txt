@@ -3,3 +3,4 @@ Werkzeug>=3.0
 streamlit
 pandas
 requests
+gunicorn
