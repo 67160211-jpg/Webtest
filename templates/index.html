@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Nook — a quiet place for your notes{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">01 — a small, private space</p>
+  <h1>Somewhere to put things down<br>without an audience.</h1>
+  <p class="hero-sub">
+    Nook is a minimal starting point for a website with accounts: sign up,
+    log in, and land on a home page that's yours alone. Swap the topic for
+    whatever you're actually building.
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ url_for('register') }}">Create an account</a>
+    <a class="btn btn-ghost" href="{{ url_for('login') }}">I already have one</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <span class="feature-mark">—</span>
+    <h3>Accounts, done properly</h3>
+    <p>Passwords are hashed with Werkzeug's security helpers, never stored in plain text.</p>
+  </div>
+  <div class="feature">
+    <span class="feature-mark">—</span>
+    <h3>Sessions via Flask-Login</h3>
+    <p>Protected routes redirect anonymous visitors straight to the login page.</p>
+  </div>
+  <div class="feature">
+    <span class="feature-mark">—</span>
+    <h3>SQLite out of the box</h3>
+    <p>No external database to configure — it's created automatically on first run.</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,283 @@
+:root {
+  --ink: #24261f;
+  --ink-soft: #565947;
+  --paper: #efece1;
+  --surface: #fbfaf5;
+  --line: #d9d5c4;
+  --pine: #3d6b5c;
+  --pine-dark: #2b4d42;
+  --brick: #a8503a;
+  --error: #a8503a;
+  --success: #3d6b5c;
+  --radius: 6px;
+  --font-display: "Lora", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+a { color: var(--pine-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+.brand:hover { text-decoration: none; }
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+}
+
+.nav-user {
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
+.nav-cta {
+  background: var(--pine);
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius);
+}
+.nav-cta:hover { background: var(--pine-dark); text-decoration: none; }
+
+/* ---------- Layout ---------- */
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--brick);
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin: 0 0 1.1rem;
+}
+
+.hero-sub {
+  max-width: 46ch;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn:hover { text-decoration: none; }
+
+.btn-primary {
+  background: var(--pine);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--pine-dark); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.btn-ghost:hover { border-color: var(--ink-soft); }
+
+.btn-full { width: 100%; margin-top: 0.5rem; }
+
+/* ---------- Feature grid (landing page) ---------- */
+
+.features {
+  margin-top: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2.5rem;
+}
+
+.feature h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.feature p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.feature-mark {
+  color: var(--brick);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Tips grid (home page) ---------- */
+
+.tips {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.tip {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.tip-index {
+  font-family: var(--font-mono);
+  color: var(--brick);
+  font-size: 0.85rem;
+}
+
+.tip p { margin: 0; color: var(--ink-soft); }
+
+/* ---------- Auth forms ---------- */
+
+.auth-card {
+  max-width: 380px;
+  margin: 2rem auto 0;
+  padding: 2.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.auth-card h1 { font-size: 1.6rem; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+}
+
+.form label {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  margin: 0.85rem 0 0.35rem;
+}
+
+.form input {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+}
+
+.form input:focus { border-color: var(--pine); }
+
+.auth-switch {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---------- Flash messages ---------- */
+
+.flash-stack {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.flash {
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.flash-error {
+  background: #f7e9e5;
+  border-color: var(--error);
+  color: #7a3a29;
+}
+
+.flash-success {
+  background: #e8efec;
+  border-color: var(--success);
+  color: var(--pine-dark);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .topbar { padding: 1rem 1.25rem; }
+  h1 { font-size: 2rem; }
+  .features { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero-actions { flex-direction: column; }
+}

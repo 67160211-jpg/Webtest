@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home — Nook{% endblock %}
+{% block content %}
+<section class="home-hero">
+  <p class="eyebrow">Signed in as {{ user['username'] }}</p>
+  <h1>This page only you can see.</h1>
+  <p class="hero-sub">
+    Nothing lives here yet — it's a blank home page, ready for whatever your
+    site is actually about. Add your own routes, models, and templates
+    alongside this one.
+  </p>
+</section>
+
+<section class="tips">
+  <div class="tip">
+    <span class="tip-index">01</span>
+    <p>Add fields to the <code>User</code> model in <code>app.py</code>, or new models entirely.</p>
+  </div>
+  <div class="tip">
+    <span class="tip-index">02</span>
+    <p>Create a new route + template pair, the same way <code>/home</code> is built.</p>
+  </div>
+  <div class="tip">
+    <span class="tip-index">03</span>
+    <p>Wrap any route that needs a logged-in user with <code>@login_required</code>.</p>
+  </div>
+</section>
+{% endblock %}
